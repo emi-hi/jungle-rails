@@ -1,0 +1,31 @@
+<section class="admin-products-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; All Categories</h1>
+  </header>
+
+  <div class="well">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <col width="80%">
+      <col width="20%">
+      <thead>
+        <tr>
+          <th>Category Name</th>
+          <th># Products in Category</th>
+        </tr>
+      </thead>
+      <tbody>
+       <% @categories.each do |category| %>
+          <div>
+            <%= render 'category', category: category %> 
+          </div>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
