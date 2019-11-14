@@ -2,9 +2,13 @@
 <h1>Login</h1>
 
 <%= form_tag '/login' do %>
-
+  <% if @error %>
+  <div class="alert alert-danger">
+    <strong>There was an issue logging you in</strong>
+    <p>please check your email address and/or password and try again!</p>
+  </div>
+  <% end %>
   Email: <%= text_field_tag :email %>
   Password: <%= password_field_tag :password %>
   <%= submit_tag "Submit" %>
-
 <% end %>
