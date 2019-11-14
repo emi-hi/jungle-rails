@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-
+  #later add this to restrict access :  before_filter :authorize
   def show
     @order = Order.find(params[:id])
   end
