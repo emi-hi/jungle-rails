@@ -1,14 +1,25 @@
 
-<h1>Login</h1>
-
-<%= form_tag '/login' do %>
-  <% if @error %>
-  <div class="alert alert-danger">
-    <strong>There was an issue logging you in</strong>
-    <p>please check your email address and/or password and try again!</p>
+<section class="admin-products-any">
+  <h1>Login</h1>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1>
+      <%= form_tag '/login' do %>
+        <% if @error %>
+        <div class="alert alert-danger">
+          <strong>There was an issue logging you in</strong>
+          <p>please check your email address and/or password and try again!</p>
+        </div>
+        <% end %>
+        <div class="form-group">
+         <strong> Email</strong> <%= text_field_tag :email, "" ,class: 'form-control'  %>
+        </div>
+        <div class="form-group">
+          <strong> Password </strong> <%= password_field_tag :password, "" ,class: 'form-control' %>
+        </div>
+        <div class="actions">
+          <%= submit_tag "Submit", class: "btn btn-primary"  %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <% end %>
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-<% end %>
+</section>
