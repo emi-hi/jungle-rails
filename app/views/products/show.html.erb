@@ -23,6 +23,7 @@
           <dt>Price</dt>
           <dd><%=  humanized_money_with_symbol @product.price  %></dd>
           <dd>
+          <br>
           <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn btn-primary' , method: :post do %>
             <%= fa_icon "shopping-cart", text: 'Add' %>
           <% end %>
