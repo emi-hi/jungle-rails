@@ -10,6 +10,9 @@
           <tr>
             <th colspan="2">Product</th>
             <th>Unit Price</th>
+            <% if active_sale? %>
+              <th>Sale Price</th>
+            <% end %>
             <th>Quantity</th>
             <th>Price</th>
           </tr>
@@ -21,12 +24,16 @@
         </tbody>
         <tfoot>
           <tr>
+          <% if active_sale? %>
+            <th colspan="5">
+          <% else %>
             <th colspan="4">
-              TOTAL:
-            </th>
-            <th>
-              <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
-            </th>
+          <% end %>
+            TOTAL:
+          </th>
+          <th>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+          </th>
           </tr>
         </tfoot>
       </table>

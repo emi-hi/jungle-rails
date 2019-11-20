@@ -7,15 +7,28 @@
     <br>
     <p><%= product.description %></p>
   </td>
-  <td>
-    <%= humanized_money_with_symbol product.price %>
-  </td>
+  <% if active_sale? %>
+    <td>
+      <s><%= humanized_money_with_symbol product.price %></s><br>
+    </td>
+    <td>
+      <%= humanized_money_with_symbol new_price(product.price) %>
+    </td>
+  <% else %>
+    <td>
+      <%= humanized_money_with_symbol product.price %>
+    </td>
+  <% end %>
   <td>
     <%= button_to remove_item_cart_path(product_id: product.id), class: 'btn btn-xs btn-danger' do %> - <% end %>
     <%= quantity %>
     <%= button_to add_item_cart_path(product_id: product.id), class: 'btn btn-xs btn-success' do %> + <% end %>
   </td>
   <td>
+    <% if active_sale? %>
+      <%= humanized_money_with_symbol new_price(product.price) * quantity %>
+    <% else %>
     <%= humanized_money_with_symbol product.price * quantity %>
+    <% end %>
   </td>
 </tr>

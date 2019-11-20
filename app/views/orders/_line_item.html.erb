@@ -7,13 +7,29 @@
     <br>
     <p><%= line_item.product.description %></p>
   </td>
-  <td>
-    <%= humanized_money_with_symbol line_item.product.price %>
-  </td>
+ <% if active_sale? %>
+    <td>
+      <s><%= humanized_money_with_symbol line_item.product.price %></s><br>
+    </td>
+    <td>
+      <%= humanized_money_with_symbol new_price(line_item.product.price) %>
+    </td>
+  <% else %>
+    <td>
+      <%= humanized_money_with_symbol line_item.product.price %>
+    </td>
+  <% end %>
+
+
+
   <td>
     <%= line_item.quantity %>
   </td>
   <td>
+   <% if active_sale? %>
+     <%= humanized_money_with_symbol new_price(line_item.product.price) * line_item.quantity %>
+   <% else %>
     <%= humanized_money_with_symbol line_item.product.price * line_item.quantity %>
+  <% end %>
   </td>
 </tr>
