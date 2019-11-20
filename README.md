@@ -7,46 +7,46 @@ Tested with Rspec and Capybera.
 Users can create accounts, view products on the main page, click products to view individual details, add to cart, and complete orders (purchase) using a credit card. Admin can create new products, categories, and sales. If there is a current sale, the new prices will be displayed along side the original price. 
 
 
-main page
+## main page
 !["screenshot of main page"](https://github.com/emi-hi/jungle-rails/blob/master/docs/main_page.png)
 
-login
+## login
 !["screenshot of login page"](https://github.com/emi-hi/jungle-rails/blob/master/docs/login.png)
 
-registration
+## registration
 !["screenshot of registration page"](https://github.com/emi-hi/jungle-rails/blob/master/docs/register.png)
 
-viewing a product's details
+## viewing a product's details
 !["screenshot of product detail page"](https://github.com/emi-hi/jungle-rails/blob/master/docs/product_details.png)
 
-if your cart is empty
+## if your cart is empty
 !["empty cart message!"](https://github.com/emi-hi/jungle-rails/blob/master/docs/empty_cart.png)
 
-after adding an item to the cart
+## after adding an item to the cart
 !["view of cart"](https://github.com/emi-hi/jungle-rails/blob/master/docs/my_cart.png)
 
-paying with stripe
+## paying with stripe
 !["stripe details"](https://github.com/emi-hi/jungle-rails/blob/master/docs/stripe_payment.png)
 
-order confirmation + details
+## order confirmation + details
 !["order details"](https://github.com/emi-hi/jungle-rails/blob/master/docs/order_details.png)
 
-admin menu
+## admin menu
 !["admin menu"](https://github.com/emi-hi/jungle-rails/blob/master/docs/admin_dropdown.png)
 
-admin >> products
+## admin >> products
 !["admin menu"](https://github.com/emi-hi/jungle-rails/blob/master/docs/admin_products.png)
 
-admin >> create new product
+## admin >> create new product
 !["admin create product"](https://github.com/emi-hi/jungle-rails/blob/master/docs/admin_products_new.png)
 
-admin >> categories
+## admin >> categories
 !["admin categories"](https://github.com/emi-hi/jungle-rails/blob/master/docs/admin_categories.png)
 
-admin >> sales
+## admin >> sales
 !["admin sales"](https://github.com/emi-hi/jungle-rails/blob/master/docs/admin_sales.png)
 
-about
+## about
 !["about us"](https://github.com/emi-hi/jungle-rails/blob/master/docs/about.png)
 
 ## Setup
